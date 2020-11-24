@@ -21,7 +21,7 @@
 
 <div class="splash-container">
     <header>
-        <img src = "./images/KS-Logo-01.png" alt = "A stylized K and S inside of a Hexagon used as a logo">
+        <img src = "./images/KS-Logo-01.svg" alt = "A stylized K and S inside of a Hexagon used as a logo">
         <div class="title-container">
             <h1 class = "title">Kenneth Schwoerke</h1>
             <p class ="sub-title">Web Developer</p>
@@ -88,13 +88,91 @@
 
     <section class = "main-section about-me-section">
         <h2 class = "main-section-title">About Me</h2>
-        <img src="" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ex enim temporibus cum vel ut obcaecati dicta, eveniet recusandae placeat, deleniti velit consequuntur mollitia harum quaerat doloremque illum quidem cupiditate!</p>
+        <img src="./images/Me.svg" alt="image of Kenneth standing next to a tree in a field.">
 
+        <p>
+            I am an artist and former counselor turned web developer.
+            <br>
+            <br>
+            I am most passionate about the front end aspects of web development utilizing HTML, CSS, JavaScript and React. I am also familiar working on the back end of projects specifically with Node.js and Express.js in a "full-stack" capacity.  
+            <br>
+            <br>
+            When I am not coding or doing code related activities. I greatly enjoy spending time outside with my dog Freya, hiking, biking and/or inside working on my latest art project, Warhammer diorama, reading, or playing video games.   
+            <br>
+            <br>
+            If you would like to know more about me, please follow the links below to my <a href="./svg/Resume-Red-v2.pdf" target="_blank"><b>resum&eacute;</b></a> and social media pages.
+        </p>  
+
+        <div class="external-site-links-container">
+
+            <ul>
+                <li>
+                  <a href="https://github.com/Kjschwoerke" target="_blank">
+                    <span>
+                      <img class="font-awesome" src="./images/github-square-brands(1).svg" alt="git hub icon">
+                    </span>
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a href="https://codepen.io/kjschwoerke" target="_blank">
+                    <span>
+                      <img class="font-awesome" src="./images/codepen-brands.svg" alt="git hub icon">
+                    </span>
+                  CodePen
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/kenneth-schwoerke/" target="_blank">
+                    <span>
+                      <img class="font-awesome" src="./images/linkedin-brands(1).svg" alt="LinkedIn icon">
+                    </span>
+                      LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/Kenneth56744636" target="_blank">
+                    <span>
+                      <img class="font-awesome" src="./images/twitter-square-brands.svg" alt="git hub icon">
+                    </span>
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/channel/UC70xh-pdpHGa7lEK1cjWkxw" target="_blank">
+                    <span>
+                      <img class="font-awesome" src="./images/youtube-square-brands.svg" alt="git hub icon">
+                    </span>YouTube
+                  </a>
+                </li>
+              </ul>
+        </div>
+    
     </section>
 
     <section class = "main-section contact-me-section">
         <h2 class = "main-section-title">Contact Me</h2>
+        
+        <div class="form-container">
+            <form action="https://formspree.io/maypjybp" method="POST" target="_blank">
+                <input type="hidden" name="_next" value="./thankyou.html"/>
+                <label>
+                Your Email:
+                  <input type="text" name="_replyto" placeholder="your.email@email.com">
+                </label>
+                <label>
+                Your Subject:
+                  <input type="text" name="subject" placeholder="Your subject line...">
+                </label>
+                <label>
+                  Your Message:
+                    <textarea name="message" placeholder="Your message..."></textarea>
+                </label>
+                <div class="button-container">
+                  <button type="submit">Send Email</button>
+                </div>
+            </form>
+        </div>
 
     </section>
     

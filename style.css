@@ -189,11 +189,8 @@ header {
 /* About Me Section */
 
 .about-me-section img {
-    height: 300px;
-    width: 250px;
-    background-color: var(--light);
-    border-radius: 20px;
-    border: solid 1px var(--dark);
+    height: auto;
+    width: 70%;
     margin-bottom: 2em;
 }
 
@@ -201,3 +198,88 @@ header {
     width: 80%;
     margin: 0 auto 2em;
 }
+
+.about-me-section ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center; 
+    height: auto;
+    padding: 0em 2em;
+}
+
+.about-me-section ul li{
+    width: 90px;
+    padding: 10px;
+    list-style-type:none;
+    background:transparent;
+    color:var(--emphasized-color);
+    border: transparent solid 2px;
+    font-weight: 700;
+}    
+
+.about-me-section ul li a{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 103px;
+    padding: 10px;
+    color: var(--emphasized-color);
+    text-decoration: none;
+    border: transparent solid 2px;
+    border-radius: 20px;
+    transition: background 1s color 1s, border 1s;
+}
+
+.about-me-section ul li a:hover{
+    width: 90px;
+    padding: 10px;
+    color: var(--dark);
+    cursor: pointer;
+    font-weight: 700;
+    border: var(--dark) solid 2px;
+    transition: background 1s color 1s, border 1s;
+}
+    
+    
+
+.about-me-section ul li a:focus{
+    width: 90px;
+    padding: 10px;
+    color: var(--emphasized-color);
+    cursor: pointer;
+    font-weight: 700;
+    border: var(--dark) solid 2px;
+    transition: background 1s color 1s, border 1s;
+}
+
+span .font-awesome {
+    height: 3em;
+    width: auto;
+}
+
+/* Contact Me Section */
+
+.form-container {
+    border: solid red 1px;
+    height: auto;
+}
+
+form {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: space-around;
+    background-color: var(--light);
+}
+
+
+
+
+
