@@ -1,0 +1,203 @@
+:root {
+    --text-color-dark: #454545;
+    --text-color-light: #ffffff;
+    --emphasized-color: #A42B31;
+
+    --light: #ffffff;
+    --mid: #F5F5F5;
+    --dark: #454545;
+    --shadow: #4545454d;
+
+    --rounded-edge: 20%;
+
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+html {
+    background: var(--mid);
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    background-color: var(--light);
+    font-family: var(--body-font);
+    text-align: center;
+    width: 100%;
+    max-width: 1250px;
+}
+
+/* Navigation Bar CSS and Hamburger Menu CSS */
+
+nav {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 1250px;
+    height: 40px;
+    background: var(--mid);
+    box-shadow: 0px 3px 3px var(--shadow);
+    margin: 0 auto;
+}
+
+nav .hamburger-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 35px;
+    height: 35px;
+    margin-right: 10px; 
+    /* border: solid 1px var(--dark);
+    border-radius: var(--rounded-edge); */
+}
+
+nav .hamburger-container .hamburger-bar {
+    height: 5px;
+    width: 33px;
+    border-radius: var(--rounded-edge);
+    background-color: var(--dark)
+}
+
+/* Splash Page, Logo and Header CSS */
+
+.splash-container {
+    padding-top: 40px;
+    height: 100%;
+    width: auto;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+
+.title {
+    color: var(--text-color-dark);
+    font-family: var(--heading-font);
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.sub-title {
+    color: var(--emphasized-color);
+    font-family: var(--heading-font);
+    font-size: 3em;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height:calc(50vh - 40px);
+    /* background: red;  */
+}
+
+.splash-buttons {
+    height: 100px;
+    padding: 0;
+    width: 300px;
+    margin: 0 auto;
+    background: var(--mid);
+    color: var(--dark);
+    border: solid 1px var(--dark);
+    border-radius: 20px;
+    box-shadow: 0px 3px 3px var(--shadow);
+    font-family: var(--heading-font);
+    font-size: 2em;
+}
+
+/* Main CSS */
+
+.main-section {
+    border-top: 30px solid var(--mid);
+}
+
+.main-section-title {
+    font-family: var(--heading-font);
+    font-size: 2em;
+    font-weight: 500;
+}
+
+/* My Work Section CSS */
+
+.work-item-card {
+    width: 90%;
+    max-width: 350px;
+    margin: 2em auto;
+    padding: 0em 2em;
+    background: var(--mid);
+    border-radius: 20px;
+    border: solid 1px var(--dark);
+}
+
+.work-item-card > h3 {
+    font-family: var(--heading-font);
+    color: var(--emphasized-color);
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.work-item-card > img {
+    height: 300px;
+    width: 250px;
+    background-color: var(--light);
+    border-radius: 20px;
+    border: solid 1px var(--dark);
+}
+
+.work-item-card > p {
+    font-family: var(--body-font);
+    color: var(--text-color-dark);
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.work-item-card > .tech-used > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.work-item-card > .tech-used > ul > li {
+    color: var(--emphasized-color);
+    font-family: var(--heading-font);
+    font-size: 1em;
+    font-weight: 400;
+    margin: 1em
+}
+
+
+/* About Me Section */
+
+.about-me-section img {
+    height: 300px;
+    width: 250px;
+    background-color: var(--light);
+    border-radius: 20px;
+    border: solid 1px var(--dark);
+    margin-bottom: 2em;
+}
+
+.about-me-section p {
+    width: 80%;
+    margin: 0 auto 2em;
+}
