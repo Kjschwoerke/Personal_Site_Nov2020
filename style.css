@@ -37,7 +37,7 @@ nav {
     z-index: 1;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 1250px;
@@ -63,6 +63,22 @@ nav .hamburger-container .hamburger-bar {
     width: 33px;
     border-radius: var(--rounded-edge);
     background-color: var(--dark)
+}
+
+.ldmode {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    color: var(--text-color-dark);
+    font-size: 11px;
+    font-family: var(--body-font);
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+nav .ldmode img {
+    height: 1rem;
+    width: auto;
 }
 
 /* Splash Page, Logo and Header CSS */
@@ -263,21 +279,139 @@ span .font-awesome {
 
 /* Contact Me Section */
 
-.form-container {
-    border: solid red 1px;
-    height: auto;
-}
-
-form {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
+.contact-section-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
-    justify-content: center;
-    justify-items: space-around;
-    background-color: var(--light);
-}
+  }
+  
+  .contact-section-container form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 75%;
+    min-width: 350px;
+    height: 650px;
+    background: var(--mid);
+    border: var(--dark) solid 2px;
+    border-radius: 10px;
+    margin: 0 auto 2em;
+    padding: 1em;
+  }
+  
+  .contact-section-container form label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.15em;
+  }
+  
+  .contact-section-container form input {
+    margin: 0.5em 0;
+    padding: 0.5em;
+    background: var(--mid);
+    color: var(--text-color-dark);
+    border: var(--dark) solid 2px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: "Roboto Slab", serif;
+  }
+  
+  .contact-section-container form input:focus {
+    background: var(--light);
+    color:var(--text-color-dark);
+    border: var(--emphasized-color) solid 2px;
+  }
+  
+  .contact-section-container form textarea {
+    height: 300px;
+    background: var(--light);
+    color: var(--text-color-dark);
+    border: var(--dark) solid 2px;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: "Roboto Slab", serif;
+    padding: 0.5em;
+  }
+  
+  .contact-section-container form textarea:focus {
+    background:var(--light);
+    color: var(--text-color-dark);
+    border: var(--emphasized-color) solid 2px;
+  }
+  
+  .contact-section-container form .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 0;
+  }
+  
+  .contact-section-container form .button-container .send-button {
+    width: 33.3%;
+    margin: 1em 0;
+    padding: 1em 0.5em;
+    background: var(--mid);
+    border: var(--dark) solid 2px;
+    border-radius: 10px;
+    outline: transparent solid 3px;
+    color: var(--dark);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.15em;
+    font-weight: 700;
+    -webkit-transition: background 1s, color 1s, border 1s;
+    transition: background 1s, color 1s, border 1s;
+  }
+
+  .hl-button {
+    width: 33.3%;
+    margin: 1em 0;
+    padding: 1em 0.5em;
+    background: var(--light);
+    border: var(--emphasized-color) solid 2px;
+    border-radius: 10px;
+    outline: transparent solid 3px;
+    color: var(--dark);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.15em;
+    font-weight: 700;
+    -webkit-transition: background 1s, color 1s, border 1s;
+    transition: background 1s, color 1s, border 1s;
+  }
+  
+  .contact-section-container form .button-container .send-button:hover {
+    background: var(--emphasized-color);
+    color: var(--light);
+    border: var(--light) solid 2px;
+    -webkit-transition: background 1s, color 1s, border 1s;
+    transition: background 1s, color 1s, border 1s;
+  }
+  
+  .contact-section-container form .button-container .send-button:focus {
+    background: var(--emphasized-color);
+    outline: #ffcccc solid 3px;
+    color: var(--light);
+    border: var(--light) solid 2px;
+    -webkit-transition: background 1s, color 1s, outline 1s, border 1s;
+    transition: background 1s, color 1s, outline 1s, border 1s;
+  }
 
 
 

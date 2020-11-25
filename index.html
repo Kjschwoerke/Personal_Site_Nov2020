@@ -12,6 +12,11 @@
 <body>
 
 <nav class = "navigation-menu">
+    <div class ='ldmode'>
+        Dark Mode
+        <img src="./images/moon-solid.svg" alt="Moon Icon to switch to Dark Mode">
+    </div>
+    
     <div class = "hamburger-container">
         <div class="hamburger-bar"></div>
         <div class="hamburger-bar"></div>
@@ -100,7 +105,7 @@
             When I am not coding or doing code related activities. I greatly enjoy spending time outside with my dog Freya, hiking, biking and/or inside working on my latest art project, Warhammer diorama, reading, or playing video games.   
             <br>
             <br>
-            If you would like to know more about me, please follow the links below to my <a href="./svg/Resume-Red-v2.pdf" target="_blank"><b>resum&eacute;</b></a> and social media pages.
+            If you would like to know more about me, please follow the links below to my <a href="./images/Resume-Red-v2.pdf" target="_blank"><b>resum&eacute;</b></a> and social media pages.
         </p>  
 
         <div class="external-site-links-container">
@@ -150,37 +155,27 @@
     
     </section>
 
-    <section class = "main-section contact-me-section">
+    <section class = "main-section contact-section-container">
         <h2 class = "main-section-title">Contact Me</h2>
-        
-        <div class="form-container">
-            <form action="https://formspree.io/maypjybp" method="POST" target="_blank">
-                <input type="hidden" name="_next" value="./thankyou.html"/>
-                <label>
+        <form action="https://formspree.io/maypjybp" method="POST" target="_self">
+            <input type="hidden" name="_next" value="./thankyou.html"/>
+            <label>
                 Your Email:
-                  <input type="text" name="_replyto" placeholder="your.email@email.com">
-                </label>
-                <label>
+                  <input id="email-field" type="text" name="_replyto"  placeholder="your.email@email.com">
+            </label>
+            <label>
                 Your Subject:
-                  <input type="text" name="subject" placeholder="Your subject line...">
-                </label>
-                <label>
+                  <input id="subject-field" type="text" name="subject"  placeholder="Your subject line...">
+            </label>
+            <label>
                   Your Message:
-                    <textarea name="message" placeholder="Your message..."></textarea>
-                </label>
-                <div class="button-container">
-                  <button type="submit">Send Email</button>
-                </div>
-            </form>
-        </div>
-
+                    <textarea id="message-field" name="message"  placeholder="Your message..."></textarea>
+            </label>
+            <div class="button-container">
+                <button id="send-button" class="send-button" value = null type="submit">Send Email</button>
+            </div>
+        </form>
     </section>
-    
-
-
-
-   
-
 </main>
 
 <footer></footer>
