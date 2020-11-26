@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./style.css">
     <title>Kenneth Schwoerke - Web Developer</title>
 </head>
-<body>
+<body id="background">
 
-<nav class = "navigation-menu">
-    <div class ='ldmode'>
+<nav id="navigation-menu" class = "navigation-menu">
+    <div id='ldmode' class ='ldmode' onclick = "darkMode()">
         Dark Mode
         <img src="./images/moon-solid.svg" alt="Moon Icon to switch to Dark Mode">
     </div>
@@ -24,7 +24,7 @@
     </div>
 </nav>
 
-<div class="splash-container">
+<div id="splash-container" class="splash-container">
     <header>
         <img src = "./images/KS-Logo-01.svg" alt = "A stylized K and S inside of a Hexagon used as a logo">
         <div class="title-container">
@@ -42,7 +42,7 @@
     </section>
 </div>
 
-<main>
+<main id="main-section-css">
 
     <section class = "main-section my-work-section">
         <h2 class = "main-section-title">My Work</h2>
@@ -178,7 +178,10 @@
     </section>
 </main>
 
-<footer></footer>
+<footer>
+    <p>Site Design: Kenneth Schwoerke, 2020</p>
+
+</footer>
 <script src="./script.js"></script>
 </body>
 </html>

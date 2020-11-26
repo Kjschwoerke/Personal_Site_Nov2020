@@ -435,3 +435,11 @@ span .font-awesome {
   .contact-section-container form .button-container .send-button:active {
     box-shadow: -3px -5px 5px var(--shadow), 3px 5px 5px var(--light), inset 3px -5px 5px var(--shadow);
   }
+
+
+  /* Darkmode CSS */
+
+  .dark {
+      background: var(--dark);
+      color: var(--light);
+  }

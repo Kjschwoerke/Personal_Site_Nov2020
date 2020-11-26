@@ -1,36 +1,26 @@
-const highlightButton = () => {
-    const sendButton = document.getElementById('send-button') 
-    const emailField = document.getElementById('email-field')
-    const subjectField = document.getElementById('subject-field')
-    const messageField = document.getElementById('message-field')
-    let emailValue = false
-    let subjectValue = false
-    let msgValue = false
+const backGround = document.getElementById('background')
+const navBar = document.getElementById("navigation-menu")
+const lDMode = document.getElementById('ldmode')
 
-    emailField.addEventListener('change', (e) => {
-        emailValue = true
-        if (emailValue && subjectValue && msgValue) {
-            sendButton.classList.remove('send-button')
-            sendButton.classList.add('hl-button')
-        } 
-    })
+let dark = false
 
-    subjectField.addEventListener('change', (e) => {
-        subjectValue = true
-        if (emailValue && subjectValue && msgValue) {
-            sendButton.classList.remove('send-button')
-            sendButton.classList.add('hl-button')
-        } 
-    })
+const darkMode = () => {
+    
+    if (dark === false) {
+        backGround.classList.add('dark')
+        navBar.classList.add('dark')
+        lDMode.classList.add('dark')
+        lDMode.innerHTML = 'Light Mode <img src="./images/sun-solid.svg" alt="Moon Icon to switch to Dark Mode">'
+        //set dark to True
+        dark = true
+    } else {
+        backGround.classList.remove('dark')
+        navBar.classList.remove('dark')
+        lDMode.classList.remove('dark')
+        lDMode.innerHTML = 'Dark Mode <img src="./images/moon-solid.svg" alt="Moon Icon to switch to Dark Mode">'
 
-    messageField.addEventListener('change', (e) => {
-        msgValue = true
-        if (emailValue && subjectValue && msgValue) {
-            sendButton.classList.remove('send-button')
-            sendButton.classList.add('hl-button')
-        } 
-    })
+        dark = false
+    }
+    
 
 }
-
-highlightButton()
