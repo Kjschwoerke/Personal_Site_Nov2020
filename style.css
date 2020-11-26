@@ -23,9 +23,9 @@
     --body-font: 'Roboto', sans-serif;
 }
 
-html {
+/* html {
     background: var(--mid);
-}
+} */
 
 body {
     margin: 0 auto;
