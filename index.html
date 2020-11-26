@@ -28,16 +28,16 @@
     <header>
         <img src = "./images/KS-Logo-01.svg" alt = "A stylized K and S inside of a Hexagon used as a logo">
         <div class="title-container">
-            <h1 class = "title">Kenneth Schwoerke</h1>
+            <h1 id = "title" class = "title">Kenneth Schwoerke</h1>
             <p class ="sub-title">Web Developer</p>
         </div>
     </header>
     
     <section class = "splash-section">
         <div class = "button-container">
-            <button class = "splash-buttons ">My Work</button>
-            <button class = "splash-buttons">About Me</button>
-            <button class = "splash-buttons">Contact Me</button>
+            <button id="splash-buttons" class = "splash-buttons ">My Work</button>
+            <button id="splash-buttons" class = "splash-buttons">About Me</button>
+            <button id="splash-buttons" class = "splash-buttons">Contact Me</button>
         </div>
     </section>
 </div>
@@ -157,7 +157,7 @@
 
     <section class = "main-section contact-section-container">
         <h2 class = "main-section-title">Contact Me</h2>
-        <form action="https://formspree.io/maypjybp" method="POST" target="_self">
+        <form id = "contact-form" class = 'contact-form' action="https://formspree.io/maypjybp" method="POST" target="_self">
             <input type="hidden" name="_next" value="./thankyou.html"/>
             <label>
                 Your Email:
