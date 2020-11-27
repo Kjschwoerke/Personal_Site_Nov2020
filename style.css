@@ -10,12 +10,12 @@
     --dark-red-transparent: #ff000d50;
     --button-red-transparent:#ff000d10;
 
-    --light: #ffffff;
-    --mid: #f5f5f5;
+    --light: #ebe9e9;
+    --mid: #e0dfdf;
     --dark: #454545;
     --black: #2c2c2c;
-    --highlight: #ffffff20;
-    --shadow: #22222275;
+    --highlight: #ffffff40;
+    --shadow: #22222240;
 
     --rounded-edge: 20%;
 
@@ -32,7 +32,7 @@ body {
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    background-color: var(--light);
+    background-color: var(--mid);
     font-family: var(--body-font);
     text-align: center;
     width: 100%;
@@ -40,6 +40,18 @@ body {
     transition: background 1s, color 1s;
 }
 
+a {
+    color: var(--emphasized-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    text-decoration: underline;
+}
 
 /* Navigation Bar CSS and Hamburger Menu CSS */
 
@@ -111,7 +123,7 @@ header {
 
 .title {
     color: var(--text-color-dark);
-    background: var(--light);
+    background: var(--mid);
     font-family: var(--heading-font);
     font-size: 3em;
     font-weight: 500;
@@ -140,7 +152,7 @@ header {
     padding: 0;
     width: 300px;
     margin: 0 auto;
-    background: var(--light);
+    background: var(--mid);
     color: var(--dark);
     border: transparent solid 2px;
     border-radius: 20px;
@@ -178,11 +190,12 @@ header {
 /* Main CSS */
 
 .main-section {
-    border-top: 30px solid var(--mid);
+    border-top: 30px solid var(--light);
 }
 
 .main-section-title {
     font-family: var(--heading-font);
+    color: var(--dark);
     font-size: 2em;
     font-weight: 500;
 }
@@ -255,6 +268,7 @@ header {
 .about-me-section p {
     width: 80%;
     margin: 0 auto 2em;
+    color: var(--dark);
 }
 
 .about-me-section ul{
@@ -291,7 +305,7 @@ header {
     text-decoration: none;
     text-align: center;
     margin: 0;
-    border: solid transparent 2px;
+    border: transparent solid 2px;
     border-radius: 10px;
     box-shadow: 3px 5px 5px var(--shadow), -3px -5px 5px var(--highlight);
     cursor: pointer;
@@ -384,7 +398,7 @@ span .font-awesome {
     padding: 0.5em;
     background: var(--mid);
     color: var(--text-color-dark);
-    border: var(--dark) solid 2px;
+    border: var(--emphasized-color) solid 2px;
     border-radius: 10px;
     font-size: 1em;
     font-family: "Roboto Slab", serif;
@@ -401,9 +415,9 @@ span .font-awesome {
   
   .contact-section-container .contact-form textarea {
     height: 300px;
-    background: var(--light);
+    background: var(--mid);
     color: var(--text-color-dark);
-    border: var(--dark) solid 2px;
+    border: var(--emphasized-color) solid 2px;
     border-radius: 10px;
     font-size: 1em;
     font-family: "Roboto Slab", serif;
