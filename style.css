@@ -232,10 +232,17 @@ header > img {
 
 /* My Work Section CSS */
 
+.my-work-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .work-item-card {
     width: 90%;
     max-width: 350px;
-    margin: 2em auto;
+    margin: 1em;
     padding: 1em 2em;
     background: var(--mid);
     color: var(--text-color-dark);
@@ -586,7 +593,7 @@ span .font-awesome {
   
   /* Position the close button (top right corner) */
   .overlay .closebtn {
-      display: flex;
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 20px;
