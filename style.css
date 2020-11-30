@@ -23,10 +23,6 @@
     --body-font: 'Roboto', sans-serif;
 }
 
-/* html {
-    background: var(--mid);
-} */
-
 body {
     margin: 0 auto;
     padding: 0;
@@ -46,11 +42,11 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 a:focus {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Navigation Bar CSS and Hamburger Menu CSS */
@@ -115,12 +111,14 @@ nav > .nav-links-container > ul > li {
     margin: 0 1em;
     padding: 0;
     list-style: none;
+    font-weight: 500;
 }
 
 #sandwich-icon {
     display: none;
     width: auto;
     height: 25px;
+    cursor: pointer;
 }
 
 .sand-bar {
@@ -133,8 +131,12 @@ nav > .nav-links-container > ul > li {
 /* Splash Page, Logo and Header CSS */
 
 .splash-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding-top: 40px;
     height: 100%;
+    min-height: 100vh;
     width: auto;
 
 }
@@ -155,8 +157,8 @@ header > img {
     color: var(--text-color-dark);
     background: var(--mid);
     font-family: var(--heading-font);
-    font-size: 3em;
-    font-weight: 500;
+    font-size: 3.5em;
+    font-weight: 600;
     margin-bottom: 0;
     transition: background 1s, color 1s;
 }
@@ -169,19 +171,24 @@ header > img {
     margin-top: 0;
 }
 
+.splash-section {
+    height: 100%;
+}
 
 .button-container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height:calc(50vh - 40px);
+    height: 100%;
+    min-height: 90%;
+    padding: 10px;
 }
 
 .splash-buttons {
     height: 100px;
     padding: 0;
     width: 300px;
-    margin: 0 auto;
+    margin: 10px auto;
     background: var(--mid);
     color: var(--dark);
     border: transparent solid 2px;
@@ -189,6 +196,7 @@ header > img {
     box-shadow: 3px 3px 5px var(--shadow), -3px -5px 5px var(--highlight);
     font-family: var(--heading-font);
     font-size: 2em;
+    font-weight: 500;
     cursor: pointer;
     -webkit-transition:  box-shadow 1s, background 1s, color 1s, border 1s;
     transition: box-shadow 1s, background 1s color 1s, border 1s;
@@ -236,13 +244,45 @@ header > img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    height: auto;
     justify-content: space-evenly;
 }
 
+.portfolio-link {
+    text-decoration: none;
+    height: auto;
+    margin: 1.5em;
+    padding: 0;
+    outline: 0;
+    border: solid transparent 2px;
+    border-radius: 20px;
+    transition: box-shadow 1s, background 1s, border 1s;
+}
+
+.portfolio-link:hover {
+    background: var(--button-red-transparent);
+    border: pink solid 2px;
+    box-shadow: 5px 10px 20px var(--dark-red), -5px -10px 20px var(--light-red), inset  3px 5px 5px var(--light-red-transparent), inset -3px -5px 10px var(--light-red);
+
+    transition: box-shadow .01s, background .01s, border .01s;
+}
+
+.portfolio-link:focus {
+    background: var(--button-red-transparent);
+    border: pink solid 2px;
+    box-shadow: 5px 10px 20px var(--dark-red), -5px -10px 20px var(--light-red), inset  3px 5px 5px var(--light-red-transparent), inset -3px -5px 10px var(--light-red);
+
+    transition: box-shadow .01s, background .01s, border .01s;
+}
+
+.portfolio-link:active {
+    box-shadow: -3px -5px 5px var(--shadow), 3px 5px 5px var(--highlight), inset 3px 5px 5px var(--shadow);
+}
+
 .work-item-card {
-    width: 90%;
+    width: 100%;
     max-width: 350px;
-    margin: 1em;
+    height: 700px;
     padding: 1em 2em;
     background: var(--mid);
     color: var(--text-color-dark);
@@ -253,11 +293,21 @@ header > img {
     transition: box-shadow 1s, background 1s color 1s, border 1s;
 }
 
+.work-item-card:hover {
+    background: var(--button-red-transparent);
+    transition: background 0.1s;
+}
+
+.work-item-card:focus {
+    background: var(--button-red-transparent);
+    transition: background 0.1s;
+}
+
 .work-item-card > h3 {
     font-family: var(--heading-font);
     color: var(--emphasized-color);
     font-size: 1.5em;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .work-item-card > img {
@@ -289,7 +339,7 @@ header > img {
     color: var(--emphasized-color);
     font-family: var(--heading-font);
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 600;
     margin: 1em
 }
 
@@ -306,6 +356,14 @@ header > img {
     width: 80%;
     margin: 0 auto 2em;
     color: var(--dark);
+}
+
+.resume-link:hover {
+    text-decoration: underline;
+}
+
+.resume-link:focus {
+    text-decoration: underline;
 }
 
 .about-me-section ul{
@@ -553,16 +611,14 @@ span .font-awesome {
 
 
    /* The Overlay (background) */
-.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+.overlay {   
     height: 100%;
     width: 0;
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    background-color: var(--light); /* Black fallback color */
     overflow-x: hidden; /* Disable horizontal scroll */
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
   }
@@ -581,14 +637,14 @@ span .font-awesome {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: var(--dark);
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
   }
   
   /* When you mouse over the navigation links, change their color */
   .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
+    color: var(--emphasized-color);
   }
   
   /* Position the close button (top right corner) */
@@ -607,7 +663,34 @@ span .font-awesome {
   
   /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
   @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
+    .splash-buttons {
+        height: auto;
+        padding: 0;
+        width: 300px;
+        margin: 1em auto;
+        background: var(--mid);
+        color: var(--dark);
+        border: transparent solid 2px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 5px var(--shadow), -3px -5px 5px var(--highlight);
+        font-family: var(--heading-font);
+        font-size: 1.25em;
+        font-weight: 500;
+        cursor: pointer;
+        -webkit-transition:  box-shadow 1s, background 1s, color 1s, border 1s;
+        transition: box-shadow 1s, background 1s color 1s, border 1s;
+    }
+
+    /* Overlay Items for sandwich menu */
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .close-overlay-button{
+        font-size: .75rem;
+      }
+
     .overlay .closebtn {
       font-size: 40px;
       top: 15px;
