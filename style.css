@@ -23,6 +23,10 @@
     --body-font: 'Roboto', sans-serif;
 }
 
+html {
+    background-color: var(--black);
+}
+
 body {
     margin: 0 auto;
     padding: 0;
@@ -33,7 +37,9 @@ body {
     text-align: center;
     width: 100%;
     max-width: 2000px;
+    height: auto;
     transition: background 1s, color 1s;
+    overflow-x: hidden;
 }
 
 a {
@@ -249,14 +255,20 @@ header > img {
 }
 
 .portfolio-link {
-    text-decoration: none;
+    width: 90%;
+    max-width: 350px;
     height: auto;
+    min-height: 750px;
+    text-decoration: none;
     margin: 1.5em;
-    padding: 0;
+    padding: 1em;
     outline: 0;
-    border: solid transparent 2px;
+    border: transparent solid 2px;
     border-radius: 20px;
-    transition: box-shadow 1s, background 1s, border 1s;
+    box-shadow: 3px 5px 5px var(--shadow), -3px -5px 5px var(--highlight);
+
+    -webkit-transition:  box-shadow 1s, background 1s, color 1s, border 1s;
+    transition: box-shadow 1s, background 1s color 1s, border 1s;
 }
 
 .portfolio-link:hover {
@@ -280,27 +292,14 @@ header > img {
 }
 
 .work-item-card {
-    width: 100%;
-    max-width: 350px;
-    height: 700px;
-    padding: 1em 2em;
-    background: var(--mid);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    background: transparent;
     color: var(--text-color-dark);
-    border-radius: 20px;
-    box-shadow: 3px 5px 5px var(--shadow), -3px -5px 5px var(--highlight);
-
-    -webkit-transition:  box-shadow 1s, background 1s, color 1s, border 1s;
-    transition: box-shadow 1s, background 1s color 1s, border 1s;
-}
-
-.work-item-card:hover {
-    background: var(--button-red-transparent);
-    transition: background 0.1s;
-}
-
-.work-item-card:focus {
-    background: var(--button-red-transparent);
-    transition: background 0.1s;
 }
 
 .work-item-card > h3 {
@@ -311,8 +310,8 @@ header > img {
 }
 
 .work-item-card > img {
-    height: 300px;
-    width: 250px;
+    height: 275px;
+    width: 275px;
     background-color: var(--light);
     border-radius: 20px;
     border: solid 1px var(--dark);
@@ -345,10 +344,14 @@ header > img {
 
 
 /* About Me Section */
+.about-me-section {
+    text-align: center;
+}
 
 .about-me-section img {
     height: auto;
     width: 70%;
+    max-width: 700px;
     margin-bottom: 2em;
 }
 
@@ -464,8 +467,9 @@ span .font-awesome {
     -ms-flex-direction: column;
     flex-direction: column;
     width: 75%;
-    min-width: 350px;
-    height: 650px;
+    min-width: 300px;
+    max-width: 900px;
+    height: auto;
     background: var(--mid);
     border-radius: 10px;
     margin: 0 auto 2em;
@@ -579,6 +583,10 @@ span .font-awesome {
   }
 
 
+  footer {
+      color: var(--text-color-dark);
+  }
+
   /* Darkmode CSS */
 
   .dark {
@@ -605,6 +613,52 @@ span .font-awesome {
 
     #ld-image {
         margin: 0;
+    }
+
+    header > img {
+        height: 400px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .sub-title {
+        font-size: 1.75rem;
+    }
+
+    .splash-section > .button-container > .splash-buttons {
+        font-size: 2rem;
+        height: auto;
+        width: auto;
+        padding: 1rem;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+
+    header > img {
+        height: 250px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .sub-title {
+        font-size: 1rem;
+    }
+
+    .splash-section > .button-container > .splash-buttons {
+        font-size: 1rem;
+        height: auto;
+        width: auto;
+        padding: 0.45rem;
+    }
+
+    /* adjust size of text for email form send button */
+    .send-button {
+        font-size: .75rem;
     }
 
   }
