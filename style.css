@@ -526,7 +526,7 @@ span .font-awesome {
     box-shadow: 5px 10px 20px var(--dark-red), -5px -10px 20px var(--light-red), inset  3px 5px 5px var(--light-red-transparent), inset -3px -5px 10px var(--light-red);
   }
   
-  .contact-section-container form .button-container {
+  .contact-section-container form .email-button-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -556,7 +556,7 @@ span .font-awesome {
     cursor: pointer;
   }
   
-  .contact-section-container form .button-container .send-button:hover {
+  .contact-section-container form .email-button-container .send-button:hover {
     border: pink solid 2px;
     background: var(--button-red-transparent);
     box-shadow: 5px 10px 20px var(--dark-red), -5px -10px 20px var(--light-red), inset  3px 5px 5px var(--light-red-transparent), inset -3px -5px 10px var(--light-red);
@@ -565,7 +565,7 @@ span .font-awesome {
     transition: box-shadow .01s, background .01s;
   }
   
-  .contact-section-container form .button-container .send-button:focus {
+  .contact-section-container > form > .email-button-container .send-button:focus {
     border: pink solid 2px;
     background: var(--button-red-transparent);
     box-shadow: 5px 10px 20px var(--dark-red), -5px -10px 20px var(--light-red), inset  3px 5px 5px var(--light-red-transparent), inset -3px -5px 10px var(--light-red);
@@ -574,7 +574,7 @@ span .font-awesome {
     transition: box-shadow .01s, background .01s;
   }
 
-  .contact-section-container form .button-container .send-button:active {
+  .contact-section-container form .email-button-container .send-button:active {
     box-shadow: -3px -5px 5px var(--shadow), 3px 5px 5px var(--highlight), inset 3px -5px 5px var(--shadow);
   }
 
