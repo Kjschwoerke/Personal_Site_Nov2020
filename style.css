@@ -70,19 +70,40 @@ nav {
     background: var(--mid);
     box-shadow: 0px 3px 3px var(--shadow);
     margin: 0 auto;
+    padding: 5px;
+}
+
+.home-ldmode-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;;
 }
 
 .ldmode {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    height: 90%;
+    padding: 5px;
     text-align: center;
     background: transparent;
     color: var(--emphasized-color);
-    font-size: 11px;
+    font-size: 10px;
     font-family: var(--body-font);
     margin-left: 2em;
+    border: transparent solid 2px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px var(--shadow), -2px -3px 4px var(--highlight);
     cursor: pointer;
+}
+
+.ldmode:hover {
+    background: var(--button-red-transparent);
+    border: pink solid 2px;
+    box-shadow: 2.5px 5px 5px var(--dark-red), -2.5px -5px 5px var(--light-red), inset  1px 2.5px 2.5px var(--light-red-transparent), inset -1px -2.5px 2.5px var(--light-red);
+    -webkit-transition: box-shadow .01s, background .01s, border .01s;
+    transition: box-shadow .01s, background .01s, border .01s;
 }
 
 .nav-image {
@@ -118,6 +139,16 @@ nav > .nav-links-container > ul > li {
     padding: 0;
     list-style: none;
     font-weight: 500;
+}
+
+#nav-links > li > a {
+    border-bottom: transparent solid 2px;
+    transition: border-bottom .5s;
+}
+
+#nav-links > li > a:hover {
+    border-bottom: var(--emphasized-color) solid 2px;
+    transition: border-bottom .01s;
 }
 
 #sandwich-icon {
@@ -209,11 +240,10 @@ header > img {
 }
 
 .splash-buttons:hover {
-    border: none;
     background: var(--button-red-transparent);
     border: pink solid 2px;
     box-shadow: 5px 10px 20px var(--dark-red), -5px -10px 20px var(--light-red), inset  3px 5px 5px var(--light-red-transparent), inset -3px -5px 10px var(--light-red);
-
+    -webkit-transition: box-shadow .01s, background .01s, border .01s;
     transition: box-shadow .01s, background .01s, border .01s;
 }
 
@@ -222,7 +252,7 @@ header > img {
     background: var(--button-red-transparent);
     border: pink solid 2px;
     box-shadow: 5px 10px 20px var(--dark-red), -5px -10px 20px var(--light-red), inset  3px 5px 5px var(--light-red-transparent), inset -3px -5px 10px var(--light-red);
-
+    -webkit-transition: box-shadow .01s, background .01s, border .01s;
     transition: box-shadow .01s, background .01s, border .01s;
 }
 
@@ -596,6 +626,10 @@ span .font-awesome {
   }
 
   @media only screen and (max-width: 900px) {
+
+    nav {
+        padding: 5px 0 5px 0;
+    }
     #nav-links {
         display: none;
     }
@@ -607,8 +641,11 @@ span .font-awesome {
     }
 
     .ldmode {
-        flex-direction: column-reverse;
-        margin-top: 1em;
+        flex-direction: row-reverse;
+        width: 80px;
+        padding: 2.5px;
+        justify-content: space-between;
+        /* margin-top: 1em; */
     }
 
     #ld-image {
