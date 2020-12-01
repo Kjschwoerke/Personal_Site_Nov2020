@@ -69,8 +69,8 @@ nav {
     height: auto;
     background: var(--mid);
     box-shadow: 0px 3px 3px var(--shadow);
-    margin: 0 auto;
-    padding: 5px;
+    margin: 0;
+    padding: 5px 0;
 }
 
 .home-ldmode-container {
@@ -125,7 +125,6 @@ nav > .nav-links-container {
     justify-content: space-between;
     align-items: center;
     width: auto;
-
 }
 
 nav > .nav-links-container > ul {
