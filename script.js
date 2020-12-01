@@ -27,7 +27,7 @@ const darkMode = () => {
 
     //background color variables
     root.style.setProperty('--light',  '#ffffff')
-    root.style.setProperty('--mid',  '#f5f5f5')
+    root.style.setProperty('--mid',  '#F5F5F5')
     root.style.setProperty('--dark',  '#454545')
 
     //text color variables
