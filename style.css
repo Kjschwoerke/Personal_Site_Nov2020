@@ -519,6 +519,7 @@ span .font-awesome {
     flex-direction: column;
     font-family: "Montserrat", sans-serif;
     font-size: 1.15em;
+    color: var(--text-color-dark)
   }
   
   .contact-section-container .contact-form input {
