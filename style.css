@@ -1,5 +1,5 @@
 :root {
-    --text-color-dark: #454545;
+    --text-color-dark: #0D0D0D;
     --text-color-light: #ffffff;
     --emphasized-color: #A42B31;
 
@@ -12,8 +12,8 @@
 
     --light: #ebe9e9;
     --mid: #f5f5f5;
-    --dark: #454545;
-    --black: #2c2c2c;
+    --dark: #0D0D0D;
+    --black: #000000;
     --highlight: #ffffff40;
     --shadow: #22222240;
 
@@ -70,7 +70,7 @@ nav {
     background: var(--mid);
     box-shadow: 0px 3px 3px var(--shadow);
     margin: 0;
-    padding: 5px 0;
+    padding: 0;
 }
 
 .home-ldmode-container {
@@ -88,9 +88,10 @@ nav {
     padding: 5px;
     text-align: center;
     background: transparent;
-    color: var(--emphasized-color);
+    color: var(--text-color-dark);
     font-size: 10px;
-    font-family: var(--body-font);
+    font-weight: 500;
+    font-family: var(--heading-font);
     margin-left: 2em;
     border: transparent solid 2px;
     border-radius: 20px;
@@ -106,10 +107,19 @@ nav {
     transition: box-shadow .01s, background .01s, border .01s;
 }
 
-.nav-image {
-    height: 40px;
+.ldmode:focus {
+    background: var(--button-red-transparent);
+    border: pink solid 2px;
+    box-shadow: 2.5px 5px 5px var(--dark-red), -2.5px -5px 5px var(--light-red), inset  1px 2.5px 2.5px var(--light-red-transparent), inset -1px -2.5px 2.5px var(--light-red);
+    -webkit-transition: box-shadow .01s, background .01s, border .01s;
+    transition: box-shadow .01s, background .01s, border .01s;
+}
+
+#nav-logo {
+    height: 60px;
     width: auto;
     margin-left: 1em;
+    margin-top: 12px;
 }
 
 nav .ldmode img {
@@ -150,6 +160,11 @@ nav > .nav-links-container > ul > li {
     transition: border-bottom .01s;
 }
 
+#nav-links > li > a:focus {
+    border-bottom: var(--emphasized-color) solid 2px;
+    transition: border-bottom .01s;
+}
+
 #sandwich-icon {
     display: none;
     width: auto;
@@ -182,10 +197,12 @@ header {
     flex-direction: column;
     justify-content: space-evenly;
     justify-items: center;
+    color: var(--emphasized-color);
 }
 
-header > img {
+header > svg {
     max-height: 500px;
+    fill: currentColor;
 }
 
 
@@ -390,6 +407,11 @@ header > img {
     color: var(--dark);
 }
 
+.resume-link {
+    font-style: italic;
+    font-family:var(--heading-font);
+}
+
 .resume-link:hover {
     text-decoration: underline;
 }
@@ -397,6 +419,8 @@ header > img {
 .resume-link:focus {
     text-decoration: underline;
 }
+
+/*About me Section CSS*/
 
 .about-me-section ul{
     display: flex;
@@ -469,10 +493,11 @@ header > img {
 }
     
 
-span .font-awesome {
+.social-media-link > span > svg {
     height: 3em;
     width: auto;
     margin: 0 auto;
+    fill: currentColor
 }
 
 /* Contact Me Section */
@@ -635,6 +660,7 @@ span .font-awesome {
     }
 
     #sandwich-icon {
+        ta;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -703,6 +729,7 @@ span .font-awesome {
 
    /* The Overlay (background) */
 .overlay {   
+    visibility: hidden;
     height: 100%;
     width: 0;
     position: fixed; /* Stay in place */
