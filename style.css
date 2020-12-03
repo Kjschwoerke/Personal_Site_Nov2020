@@ -85,7 +85,7 @@ nav {
     flex-direction: row-reverse;
     align-items: center;
     height: 90%;
-    padding: 5px;
+    padding: 5px 10px;
     text-align: center;
     background: transparent;
     color: var(--text-color-dark);
@@ -116,7 +116,7 @@ nav {
 }
 
 #nav-logo {
-    height: 60px;
+    height: 50px;
     width: auto;
     margin-left: 1em;
     margin-top: 12px;
@@ -185,7 +185,7 @@ nav > .nav-links-container > ul > li {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-top: 40px;
+    padding-top: 76px;
     height: 100%;
     min-height: 100vh;
     width: auto;
@@ -653,14 +653,14 @@ header > svg {
   @media only screen and (max-width: 900px) {
 
     nav {
-        padding: 5px 0 5px 0;
+        padding: 2px 0 2px 0;
     }
+    
     #nav-links {
         display: none;
     }
 
     #sandwich-icon {
-        ta;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -668,10 +668,10 @@ header > svg {
 
     .ldmode {
         flex-direction: row-reverse;
-        width: 80px;
-        padding: 2.5px;
+        width: 100px;
+        padding: 1px 2px;
         justify-content: space-between;
-        /* margin-top: 1em; */
+        font-size: 10px;
     }
 
     #ld-image {
