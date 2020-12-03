@@ -725,6 +725,11 @@ header > svg {
     }
 
     /* adjust size of text for email form send button */
+
+    .email-button-container > p {
+        font-size: 13px;
+    }
+
     .send-button {
         font-size: .75rem;
     }
