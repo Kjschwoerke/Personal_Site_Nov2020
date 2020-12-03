@@ -591,9 +591,14 @@ header > svg {
     display: flex;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
     margin-top: 0;
+    color: var(--text-color-dark)
+  }
+
+  .email-button-container > p {
+      text-align: left;
   }
   
 .send-button {
