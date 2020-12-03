@@ -675,7 +675,7 @@ header > svg {
         flex-direction: row-reverse;
         width: 100px;
         padding: 1px 2px;
-        justify-content: space-between;
+        justify-content: space-evenly;
         font-size: 10px;
     }
 
