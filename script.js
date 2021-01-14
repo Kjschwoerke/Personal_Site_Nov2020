@@ -3,7 +3,7 @@
 
 
 const darkMode = () => { 
-    console.log(localStorage)
+    //console.log(localStorage)
     let light = localStorage.getItem('light') || null
     let dark = localStorage.getItem('dark') || null
     const root = document.documentElement;
@@ -79,7 +79,7 @@ function checkDark() {
     const lDImage = document.getElementById('ld-image')
     
     if(localStorage.getItem('dark') === 'true') {
-        console.log('true')
+        //console.log('true')
         //background color variables
     root.style.setProperty('--light',  '#2c2c2c')
     root.style.setProperty('--mid',  '#3a3a3a')
@@ -96,7 +96,14 @@ function checkDark() {
     }
 }
 
-window.onload(checkDark())
+if (window.addEventListener) {
+    window.addEventListener('load', checkDark);
+ } else if (window.attachEvent) {
+    window.attachEvent('onload', checkDark);
+ } else { 
+    window.onload = getLocation;
+ }
+//window.onload(checkDark())
 
 
 //show sandwich menu links as overlay
