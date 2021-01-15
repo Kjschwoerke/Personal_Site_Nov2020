@@ -96,6 +96,7 @@ function checkDark() {
     }
 }
 
+//check the status of l/d mode on window load
 if (window.addEventListener) {
     window.addEventListener('load', checkDark);
  } else if (window.attachEvent) {
